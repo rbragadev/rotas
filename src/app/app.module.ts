@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursosService } from './cursos/cursos.service';
+import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,11 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
     HomeComponent,
     LoginComponent,
     CursosComponent,
-    CursoDetalheComponent
+    CursoDetalheComponent,
+    NaoEncontradoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [CursosService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
