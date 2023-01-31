@@ -6,7 +6,7 @@ import { AlunosComponent } from './alunos.component';
 
 const routes: Routes = [
   {
-    path: 'alunos',
+    path: '',
     component: AlunosComponent,
     children: [
       {
