@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
+import { AuthService } from './login/auth.service';
 import { LoginComponent } from './login/login.component';
 
 //import { CursosComponent } from './cursos/cursos.component';
@@ -22,8 +24,8 @@ import { LoginComponent } from './login/login.component';
     // CursoDetalheComponent,
     // NaoEncontradoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  //providers: [CursosService],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
